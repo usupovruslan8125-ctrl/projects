@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Журнал работ</h2>
+{% for job in jobs %}
+    <h3>Работа # {{ job.id }}</h3>
+    <table border="1" class="table">
+        <tr>
+            <th>Название работы</th>
+            <th>Ответственный</th>
+            <th>Продолжительность (часы)</th>
+            <th>Список id команды</th>
+            <th>Завершена</th>
+        </tr>
+        <tr>
+            <td>{{ job.job }}</td>
+            <td>{{ job.user.surname }} {{ job.user.name }}</td>
+            <td>{{ job.work_size }}</td>
+            <td>{{ job.collaborators }}</td>
+            <td>{{ "Да" if job.is_finished else "Нет" }}</td>
+        </tr>
+    </table>
+{% endfor %}
+{% endblock %}
