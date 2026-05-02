@@ -1,7 +1,3 @@
-from db_session import global_init, create_session
-from jobs import Jobs
-from users import User
-
 db_name = input()
 global_init(db_name)
 db_sess = create_session()
