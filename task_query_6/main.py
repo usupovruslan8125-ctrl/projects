@@ -1,6 +1,5 @@
 from data import db_session
 from data.jobs import Jobs
-from data.users import User
 
 db_name = input()
 db_session.global_init(db_name)
