@@ -1,9 +1,9 @@
-from data import db_session
-from data.jobs import Jobs
+from db_session import global_init, create_session
+from jobs import Jobs
 
 db_name = input()
-db_session.global_init(db_name)
-db_sess = db_session.create_session()
+global_init(db_name)
+db_sess = create_session()
 jobs = db_sess.query(Jobs).all()
 max_collaborators = 0
 for job in jobs:
