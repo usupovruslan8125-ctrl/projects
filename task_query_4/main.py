@@ -1,7 +1,10 @@
+from data import db_session
+from data.users import User
+
 db_name = input()
-global_init(db_name)
-db_sess = create_session()
+db_session.global_init(db_name)
+db_sess = db_session.create_session()
 for user in db_sess.query(User).filter(
     (User.position.like("%chief%")) | (User.position.like("%middle%"))
 ):
-    print(user)
+    print(f"{user} {user.position}")
