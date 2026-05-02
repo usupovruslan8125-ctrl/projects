@@ -11,7 +11,11 @@ for job in jobs:
         count = len(job.collaborators.split(","))
         if count > max_collaborators:
             max_collaborators = count
+result = []
 for job in jobs:
     if job.collaborators and len(job.collaborators.split(",")) == max_collaborators:
         team_leader = db_sess.query(User).filter(User.id == job.team_leader).first()
-        print(f"{team_leader.surname} {team_leader.name}")
+        result.append(f"{team_leader.surname} {team_leader.name}")
+result.sort()
+for name in result:
+    print(name)
