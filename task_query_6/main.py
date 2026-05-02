@@ -1,3 +1,6 @@
+from jobs import Jobs
+from users import User
+
 db_name = input()
 global_init(db_name)
 db_sess = create_session()
