@@ -1,6 +1,3 @@
-from db_session import global_init, create_session
-from users import User
-
 db_name_1 = input()
 db_name_2 = input()
 
