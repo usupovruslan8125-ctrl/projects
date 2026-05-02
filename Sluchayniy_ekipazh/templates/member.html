@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% set member = crew | random %}
+<h2>Случайный член экипажа</h2>
+<div class="member-card">
+    <img src="{{ url_for('static', filename='img/' ~ member.photo) }}"
+         alt="{{ member.name }} {{ member.surname }}"
+         class="member-photo">
+    <h3>{{ member.name }} {{ member.surname }}</h3>
+    <h5>Специальности:</h5>
+    <ul>
+        {% for spec in member.specialities | sort %}
+        <li>{{ spec }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

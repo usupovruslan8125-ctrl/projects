@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Ridley",
+        "surname": "Scott",
+        "photo": "scott.jpg",
+        "specialities": ["research engineer", "captain", "pilot"]
+    },
+    {
+        "name": "Andy",
+        "surname": "Weir",
+        "photo": "weir.jpg",
+        "specialities": ["botany", "biology", "chemistry"]
+    },
+    {
+        "name": "Sean",
+        "surname": "Bean",
+        "photo": "bean.jpg",
+        "specialities": ["navigation", "astronomy", "pilot"]
+    },
+    {
+        "name": "Venkata",
+        "surname": "Kapur",
+        "photo": "kapur.jpg",
+        "specialities": ["mechanics", "engineering", "robotics"]
+    },
+    {
+        "name": "Watney",
+        "surname": "Mark",
+        "photo": "watney.jpg",
+        "specialities": ["botany", "genetics", "survival"]
+    },
+    {
+        "name": "Lewis",
+        "surname": "Melissa",
+        "photo": "lewis.jpg",
+        "specialities": ["command", "geology", "strategy"]
+    }
+]
